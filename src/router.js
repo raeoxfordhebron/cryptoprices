@@ -3,6 +3,7 @@ import App from "./App"
 import Main from "./pages/main"
 import Currencies from "./pages/currencies"
 import Price from "./pages/price"
+import {priceLoader} from "./loaders"
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -16,8 +17,9 @@ const router = createBrowserRouter(
             path='currencies' 
             element={<Currencies/>}/>
             <Route
-            path='price'
-            element={<Price/>}/>
+            path='price/:symbol'
+            element={<Price/>}
+            loader={priceLoader}/>
         </Route>
     )
 )
