@@ -1,7 +1,18 @@
 import {useLoaderData} from "react-router-dom"
 
 const Price = (props) => {
-    return <h1>This is the Price Component</h1>;
+  // get the data fetched by our loader
+  const coin = useLoaderData()
+    return (
+      <div>
+        <h1>
+          {coin.asset_id_base}/{coin.asset_id_quote}
+        </h1>
+        <h2>
+          {coin.rate}
+        </h2>
+      </div>
+    )
   };
   
   export default Price;
