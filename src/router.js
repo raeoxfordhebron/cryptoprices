@@ -15,6 +15,9 @@ const router = createBrowserRouter(
             <Route 
             path='currencies' 
             element={<Currencies/>}/>
+            <Route
+            path='price'
+            element={<Price/>}/>
         </Route>
     )
 )
